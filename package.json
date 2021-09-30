@@ -1,0 +1,19 @@
+{
+  "name": "south-media",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qp0kycHuk/Southmedia-test.git"
+  },
+  "author": "Yuferov Sergey <serega990112@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qp0kycHuk/Southmedia-test/issues"
+  },
+  "homepage": "https://github.com/qp0kycHuk/Southmedia-test#readme"
+}
