@@ -1,5 +1,14 @@
+@import 'Container.less';
+
+
 body {
   margin: 0;
+}
+
+.defs {
+  position: absolute;
+  left    : -1000px;
+  top     : -1000px;
 }
 
 .v-hidden {
@@ -14,12 +23,96 @@ body {
 }
 
 .started {
-  position: relative;
+  position   : relative;
+  display    : flex;
+  align-items: center;
 
   &-background {
+    position  : absolute;
+    left      : 0;
+    top       : 0;
+    width     : 100%;
+    background: #fff;
+
+    // height  : 100%;
+    // --percent     : 50%;
+    // background : linear-gradient(rgb(200, 210, 78), rgb(200, 210, 78) var(--percent), #fff var(--percent));
+    // background    : #fff;
+    // filter: invert(100);
+    // backdrop-filter: invert(100%) ;
     &-svg {
       width : 100%;
       height: 100%;
+
+      rect {
+        fill: #C8D24E;
+
+      }
+    }
+
+    &-top {
+      // z-index      : 2;
+      // clip-path : url("#started-background-clip");
+      clip-rule : evenodd;
+      background: rgba(255, 0, 0, 0);
+
+    }
+
+    &-top &-svg {
+      fill              : none;
+      // backdrop-filter: invert(100%);
+
+      g {
+
+        // backdrop-filter: invert(100%);
+        // filter         : invert(1);
+      }
+
+      rect {
+        // fill: #000;
+        // opacity: 0;
+        // visibility: hidden;
+
+      }
     }
   }
+
+  &-inner {
+    display        : flex;
+    align-items    : center;
+    position       : relative;
+    z-index        : 3;
+    // mix-blend-mode : difference;
+    // backdrop-filter: invert(100%);
+    // filter         : invert(1)
+  }
+
+  &-content {
+    // mix-blend-mode: exclusion;
+    // color         : white;
+  }
+
+  &-title {
+    font-size    : 72px;
+    line-height  : 91.42%;
+    font-family  : 'Codec-Warm';
+    font-weight  : 800;
+    margin-bottom: 30px;
+    color        : #fff;
+    mix-blend-mode: difference;
+  }
+
+  &-subtitle {
+    font-family      : 'Codec-Warm';
+    font-size        : 16px;
+    // color         : #fff;
+    // mix-blend-mode: difference;
+  }
+
+  &-img {
+    margin-left: auto;
+    position   : relative;
+    z-index    : 3;
+  }
+
 }

@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Codec-Warm';
+  src        : url("../fonts/Codec/Codec-Warm-Regular-trial.ttf");
+  font-weight: normal;
+
+}
+
+@font-face {
+  font-family: 'Codec-Warm';
+  src        : url("../fonts/Codec/Codec-Warm-Bold-trial.ttf");
+  font-weight: bold;
+
+}
+
+@font-face {
+  font-family: 'Codec-Warm';
+  src        : url("../fonts/Codec/Codec-Warm-ExtraBold-trial.ttf");
+  font-weight: 800;
+
+}
+
+@font-face {
+  font-family: 'Codec-Warm';
+  src        : url("../fonts/Codec/Codec-Warm-Heavy-trial.ttf");
+  font-weight: 900;
+
+}
