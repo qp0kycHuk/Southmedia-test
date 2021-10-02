@@ -1,8 +1,9 @@
-const startPath = document.querySelector('.-started-background-1-')
-const startPath1 = document.querySelector('.-started-background-2-')
+const startId = '#started-background-start'
+const endId = '#started-background-end'
 
 
-// const tl = new TimelineMax({repeat:-1, repeatDelay: 0.5, })
+MorphSVGPlugin.convertToPath(startId)
+MorphSVGPlugin.convertToPath(endId)
 
 console.log(MorphSVGPlugin);
 // gsap.registerPlugin(MorphSVGPlugin)
@@ -13,5 +14,6 @@ console.log(MorphSVGPlugin);
 
 var tl = new TimelineMax({ defaults: { ease: "linear" } })
 tl
-  .to(startPath, 2, { morphSVG: ".-started-background-2-", ease: "none", duration: 1 }, "+=1")
-  .to(startPath, 2, { morphSVG: ".-started-background-3-", ease: "none", duration: 1 }, "+=1")
+  // .to(startId, 2, { morphSVG: '#started-background-1', ease: "none", duration: 3 })
+  .to(startId, 2, { morphSVG: endId, ease: "none", duration: 3 })
+  
