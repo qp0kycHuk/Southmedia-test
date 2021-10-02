@@ -15,5 +15,5 @@ console.log(MorphSVGPlugin);
 var tl = new TimelineMax({ defaults: { ease: "linear" } })
 tl
   // .to(startId, 2, { morphSVG: '#started-background-1', ease: "none", duration: 3 })
-  .to(startId, 2, { morphSVG: endId, ease: "none", duration: 3 })
+  .to(startId, 2, { morphSVG: endId,  duration: 3 }, "+=2")
   
