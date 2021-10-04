@@ -43,7 +43,7 @@ body {
 
 
 .screen {
-  height  : 100vh;
+  // height  : 100vh;
   width   : 100%;
   overflow: hidden;
 
@@ -53,6 +53,7 @@ body {
   position   : relative;
   display    : flex;
   align-items: center;
+  height     : 100%;
 
   &-background {
     position      : absolute;
@@ -202,10 +203,15 @@ body {
 }
 
 .logo {
-  position: absolute;
-  right   : calc(50% - var(--section-width) / 2);
-  top     : 62px;
-  z-index : 1;
+  position  : absolute;
+  right     : calc(50% - var(--section-width) / 2);
+  top       : 62px;
+  z-index   : 4;
+  transition: .3s;
+
+  &.invert {
+    color: #fff;
+  }
 
   .icon {
     height: 20px;
@@ -254,7 +260,7 @@ body {
   align-items: flex-start;
 
   margin-top   : auto;
-  margin-bottom: 30px;
+  margin-bottom: auto;
 
   &-wrapper {
     display       : flex;
@@ -285,13 +291,13 @@ body {
     background   : #FCF9F0 url("../img/qwiz-bg.png") no-repeat right calc(100% - 45px);
     border-radius: 18px;
     flex-grow    : 1;
-    padding      : 40px 60px;
+    padding      : 32px 60px;
     max-width    : 790px;
     position     : relative;
 
     &-field {
       &+& {
-        margin-top: 20px;
+        margin-top: 32px;
       }
     }
 
@@ -537,6 +543,7 @@ body {
   flex-direction : column;
   align-items    : center;
   justify-content: center;
+  text-align     : center;
   transition     : .3s ease;
 
   &-img {
@@ -609,5 +616,78 @@ body {
     &-aside {
       margin-bottom: 40px;
     }
+  }
+}
+
+@media (max-width:900px) {
+  .started {
+    &-img {
+      display: none;
+    }
+  }
+
+  .qwiz {
+    // padding-top: 100px;
+
+    &-aside {
+      padding-left: 100px;
+      width       : 100%;
+    }
+
+    &-form {
+      width    : 100%;
+      max-width: none;
+    }
+  }
+
+}
+
+@media (max-width:740px) {
+  .burger {
+    display: none;
+  }
+
+  .qwiz {
+    &-aside {
+      padding-left: 0;
+    }
+
+    &-form {
+      padding-left : 30px;
+      padding-right: 30px;
+      margin-left  : -15px;
+      margin-right : -15px;
+      width        : calc(100% + 30px);
+      border-radius: 0;
+
+
+      &-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .qwiz-form-checklist {
+    flex-wrap: wrap;
+
+    .form-field+.form-field {
+      margin-left: 0;
+    }
+
+    .form-field {
+      margin-right : 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+@media (max-width:540px) {
+  .started-sempl-item-1 {
+    top: 160px;
+  }
+
+  .started-title {
+    font-size: 48px;
   }
 }

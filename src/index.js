@@ -9,6 +9,7 @@ maskedInputInit()
 // screen scrolling --------------------------------------------------------
 
 new fullpage('#fullpage', {
+  responsiveWidth: 900,
   onLeave: (section) => {
     if (section.item.querySelector('.started')) {
       document.querySelector('.burger').classList.remove('invert-active')

@@ -93,9 +93,11 @@ function range(selector) {
         document.removeEventListener('mousemove', moveHandler)
       })
 
+      
 
 
     })
+    window.addEventListener('resize', () => render(options))
   }
 
 
@@ -137,6 +139,7 @@ function range(selector) {
 
 
   function render(options) {
+
     const innerWidth = options.inner.getBoundingClientRect().width
     const left = (options.from - options.min) / (options.max - options.min) * innerWidth
     const right = (options.to - options.min) / (options.max - options.min) * innerWidth

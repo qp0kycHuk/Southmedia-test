@@ -7,7 +7,13 @@ var tl = new TimelineMax({
     setTimeout(() => {
       document.querySelector('.burger').classList.add('invert')
       if (document.querySelector('.started').closest('.section.active')) { document.querySelector('.burger').classList.add('invert-active') }
+
     }, 3000)
+    setTimeout(() => {
+      document.querySelector('.logo').classList.add('invert')
+      if (document.querySelector('.started').closest('.section.active')) { document.querySelector('.logo').classList.add('invert-active') }
+      
+    }, 2500)
   }
 })
 
