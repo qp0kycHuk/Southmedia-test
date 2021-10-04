@@ -1,0 +1,67 @@
+// out: false
+
+
+
+
+.btn {
+
+	cursor : pointer;
+	outline: none;
+
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+
+	height       : 50px;
+	padding      : 0 32px;
+	border-radius: 47px;
+
+
+	font-weight: 800;
+	font-size  : 18px;
+	line-height: 1;
+
+	color     : var(--color-text);
+	border    : transparent;
+	transition: .2s ease;
+
+
+
+
+
+
+	// color
+
+	&--accent {
+		background: #FF4016;
+		color     : #fff;
+
+		@media (hover) {
+			&:hover {
+				background: #ff5630;
+			}
+		}
+
+		&:active {
+			background: #e43109;
+		}
+
+		&.disabled,
+		&:disabled {
+			background: #CACCCF;
+			color     : #E8E8E8;
+			box-shadow: none;
+		}
+	}
+
+
+
+	&.disabled,
+	&:disabled {
+		cursor: default;
+	}
+
+
+
+
+}

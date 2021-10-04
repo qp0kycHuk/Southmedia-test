@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="stylesheet" href="source/animate.css">
 	<link rel="stylesheet" href="source/fullpage.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -21,111 +22,211 @@
 
 
 
-	<svg class="defs">
+	<svg class="defs" viewBox="0 0 1 1">
 		<defs>
-			<path class=" v-hidden" id="started-background-1"
-			d="M-0.500061 149L-0.500023 85.5V0H1281C1281 0 1280.5 160.5 1280 160.5C1217.5 160.5 1116.21 207.5 1017 259C810.909 365.982 583 390.5 422 259C258.974 125.845 -0.500061 149 -0.500061 149Z" />
-			<path class="-started-background-2- v-hidden" id="started-background-2"
-				d="M52.4999 149C-0.500061 153.334 -0.500061 156.5 -0.500061 156.5L-0.500008 0H1279.5V405C1279.5 405 1206.97 347.885 1022.56 489C837.001 631 599 622.5 457 431.5C331.412 262.576 272.62 131 52.4999 149Z" />
-			<path class="-started-background-3- v-hidden" id="started-background-3"
-				d="M426 541C300 347.5 77.2907 373 1.04904e-05 468.5C-0.175344 468.717 1.09673e-05 468.386 -0.5 0H1280L1281 565C1281 565 1149.4 529.385 964.999 670.5C779.439 812.5 611.152 825.341 426 541Z" />
 
-			<rect x="0" y="0" width="1280" height="680" id="started-background-end"></rect>
 
-			<clipPath id="started-background-clip">
-				<!-- <path id="started-background-start"
-					d="M-0.500061 149L-0.500023 85.5V0H1281C1281 0 1280.5 160.5 1280 160.5C1217.5 160.5 1116.21 207.5 1017 259C810.909 365.982 583 390.5 422 259C258.974 125.845 -0.500061 149 -0.500061 149Z" /> -->
-					<rect x="0" y="0" width="1280" height="0" id="started-background-start"></rect>
+			<path id="started-background-end" d="M0,0l1,0v1.7c0,0-0.1,0-0.3,0.1C0.6,2,0.5,1.9,0.3,1.6C0.2,1.4,0,1.6,0,1.6L0,0z" />
+
+			<clipPath id="started-background-clip" clipPathUnits="objectBoundingBox">
+				<path id="started-background-start"
+					d="M0-0.5h1v0.3c0,0-0.1,0-0.2,0.1C0.7,0,0.5,0.1,0.3-0.2C0.2-0.4,0-0.3,0-0.3V-0.5z" />
+
 			</clipPath>
 
 		</defs>
 
 	</svg>
+	<button data-toggle-link="menu" class="burger wow fadeIn">
+		<svg class="icon">
+			<use xlink:href="img/sprite.svg#burger" />
+		</svg>
+	</button>
+	<div class="menu" id="menu" data-toggle-cover>
+		<button class="menu-close" data-toggle-link="menu">
+			<svg class="icon">
+				<use xlink:href="img/sprite.svg#cross" />
+			</svg>
+		</button>
+		<a class="menu-item" href="#section-1" data-toggle-link>Главная</a>
+		<a class="menu-item" href="#section-2" data-toggle-link>Подбор блюд</a>
+	</div>
 	<div id="fullpage">
-		<div class="section" data-anchor="section-1">
-			<section class="screen  started">
-
-				<div class="burger">
-					<img src="img/burger.svg" alt="" class="icon">
-				</div>
-
-				<div class="logo">
-					<img src="img/logo.svg" alt="">
-				</div>
-
-				<div class="started-background ">
-					<svg class="started-background-svg" viewBox="0 0 1280 680" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-						<rect x="0" y="0" width="1280" height="680" clip-path="url(#started-background-clip)" clip-rule="evenodd">
-						</rect>
+		<div class="section active" data-anchor="section-1">
+			<section class="screen  started parallax-container">
 
 
+				<div class="logo wow fadeIn">
+					<svg class="icon">
+						<use xlink:href="img/sprite.svg#logo" />
 					</svg>
-
 				</div>
+
+				<div class="started-background "></div>
 				<div class="started-background started-background-top">
-					<svg class="started-background-svg" viewBox="0 0 1280 680" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<g>
 
-							<rect x="0" y="0" width="1280" height="680" clip-path="url(#started-background-clip)" clip-rule="evenodd">
-							</rect>
-						</g>
-
-
-
-					</svg>
 
 				</div>
 				<div class="started-inner">
 					<div class="started-content">
-						<div class="started-title">
+						<div class="started-title  wow fadeIn" data-wow-delay=".4s">
 							Как понять, <br>
 							что греча <br>
 							твое все?
 						</div>
-						<div class="started-subtitle">
+						<div class="started-subtitle  wow fadeIn" data-wow-delay=".5s">
 							Укажи, чего ты хочешь<br>
 							и получи подборку блюд из гречи
 						</div>
 					</div>
-					<div class="started-img">
+					<div class="started-img wow fadeIn parallax-item" data-wow-delay=".4s" data-speed="0.1">
 						<img src="img/started-img.png" alt="">
+						<div class="started-img-shadow"></div>
 					</div>
 				</div>
 
-				<a href="#section-2" class="next-btn">
+				<a href="#section-2" class="next-btn  wow fadeIn" data-wow-delay=".5s">
 					Начать!
-					<img src="img/arrow-down.svg" alt="">
+					<svg class="icon">
+						<use xlink:href="img/sprite.svg#arrow-down" />
+					</svg>
 				</a>
 
 				<!-- <div class="started-sempl"> -->
-				<div class="started-sempl-item started-sempl-item-0"><img src="img/grain-0.png" alt=""></div>
-				<div class="started-sempl-item started-sempl-item-1"><img src="img/grain-1.png" alt=""></div>
-				<div class="started-sempl-item started-sempl-item-2"><img src="img/grain-2.png" alt=""></div>
-				<div class="started-sempl-item started-sempl-item-3"><img src="img/grain-3.png" alt=""></div>
-				<div class="started-sempl-item started-sempl-item-4"><img src="img/grain-4.png" alt=""></div>
+				<div class="started-sempl-item started-sempl-item-0 parallax-item wow fadeIn" data-wow-delay=".2s"
+					data-speed="0.5"><img src="img/grain-0.png" alt=""></div>
+				<div class="started-sempl-item started-sempl-item-1 parallax-item wow fadeIn" data-wow-delay=".3s"
+					data-speed="0.4"><img src="img/grain-1.png" alt=""></div>
+				<div class="started-sempl-item started-sempl-item-2 parallax-item wow fadeIn" data-wow-delay=".4s"
+					data-speed="0.8"><img src="img/grain-2.png" alt=""></div>
+				<div class="started-sempl-item started-sempl-item-3 parallax-item wow fadeIn" data-wow-delay=".5s"
+					data-speed="1"><img src="img/grain-3.png" alt=""></div>
+				<div class="started-sempl-item started-sempl-item-4 parallax-item wow fadeIn" data-wow-delay=".6s"
+					data-speed="0.5"><img src="img/grain-4.png" alt=""></div>
 				<!-- </div> -->
 
 			</section>
 		</div>
 		<div class="section" data-anchor="section-2">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi impedit nulla doloremque laborum dolor quis
-			deserunt itaque, magni earum corrupti non tempore eum nisi voluptas rem qui cum neque quos!
+			<div class="screen qwiz-wrapper">
+
+				<section class="qwiz">
+					<div class="qwiz-aside">
+						<div class="qwiz-aside-title">Твоя греча</div>
+						<div class="qwiz-aside-subtitle">
+							Укажи, чего ты хочешь <br>
+							и получи подборку блюд из гречи
+						</div>
+					</div>
+					<form class="qwiz-form">
+						<div class="qwiz-form-field">
+							<div class="qwiz-form-label">Насколько ты любишь гречку?</div>
+							<div class="qwiz-form-range range" data-type="single" data-max="100" data-min="0" data-to="76">
+								<input type="text" class="range-input-from" hidden>
+								<input type="text" class="range-input-to" hidden>
+								<div class="range-inner"></div>
+								<div class="range-sign">на все <span class="range-value"></span>% </div>
+							</div>
+						</div>
+						<div class="qwiz-form-field">
+							<div class="qwiz-form-label">Время на приготовление</div>
+							<div class="qwiz-form-range range" data-type="double" data-min="2" data-max="72" data-to="30">
+								<input type="text" class="range-input-from" hidden>
+								<input type="text" class="range-input-to" hidden>
+								<div class="range-inner"></div>
+								<div class="range-sign">
+									<span class="range-value"></span> мин.
+								</div>
+							</div>
+						</div>
+						<div class="qwiz-form-field">
+							<div class="qwiz-form-label">Время приема</div>
+							<div class="qwiz-form-checklist">
+
+								<label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input">
+									<div class="form-checkbox-target"> </div>
+									<div class="form-label"> Завтрак </div>
+								</label>
+
+								<label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input">
+									<div class="form-checkbox-target"> </div>
+									<div class="form-label"> Обед </div>
+								</label>
+
+								<label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input">
+									<div class="form-checkbox-target"> </div>
+									<div class="form-label"> Ужин </div>
+								</label>
+
+								<label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input">
+									<div class="form-checkbox-target"> </div>
+									<div class="form-label"> Ночной дожор </div>
+								</label>
+
+							</div>
+						</div>
+						<div class="qwiz-form-field">
+							<div class="qwiz-form-grid">
+
+								<label class="form-field ">
+									<div class="form-label">Имя</div>
+									<div class="form-input-cover">
+										<input type="text" class="form-input" data-required>
+									</div>
+								</label>
+
+								<label class="form-field ">
+									<div class="form-label">Телефон</div>
+									<div class="form-input-cover">
+										<input type="tel" class="form-input" placeholder="+ 7 (___) ___-__-__" data-required>
+									</div>
+								</label>
+
+							</div>
+						</div>
+						<button class="qwiz-form-btn btn btn--accent">Получить по гречке</button>
+
+
+						<div class="success">
+							<div class="success-img">
+								<svg class="icon">
+									<use xlink:href="img/sprite.svg#modal-success" />
+								</svg>
+							</div>
+							<div class="success-title">Ваша заявка отправлена</div>
+						</div>
+					</form>
+				</section>
+				<footer class="footer">
+					<svg class="icon">
+						<use xlink:href="img/sprite.svg#logo" />
+					</svg>
+				</footer>
+			</div>
 		</div>
 	</div>
 
 	<script src="source/fullpage.js"></script>
+	<script src="source/wow.min.js"></script>
 	<script>
-		new fullpage('#fullpage', {
-			//options here
-			// autoScrolling: true,
-			// scrollHorizontally: true
-		});
-
-		//methods
-		// fullpage_api.setAllowScrolling(false);
+		new WOW().init()
 	</script>
+
+	<script src="source/ui-toggle.js"></script>
+	<script src="source/jquery-3.5.0.min.js"></script>
+	<script src="source/maskedinput.js"></script>
+
 	<script src="strated-background.js"></script>
+	<script src="parallax.js"></script>
+	<script src="range.js"></script>
+	<script src="index.js"></script>
+
+
+
 </body>
 
 </html>
